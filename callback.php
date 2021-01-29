@@ -45,7 +45,7 @@ if ($message->{"text"} == '確認') {
      ]; 
 } elseif ($message->{"text"} == 'アンケート回答') {
      // カルーセルタイプ 
-    $messageData = [ 'type' => 'text', 'text' => "ユーザーIDを取得できていることを確認→  ".$userid ];
+    $messageData = [ 'type' => 'text', 'text' => "https://volare.slack.com/archives/DKJJ24Q22/p1611902930000600"."ユーザーIDのトークンをパラメタにつけてURLを作成→  ".$userid ];
  } else {
      // それ以外は送られてきたテキストをオウム返し
      $messageData = [ 'type' => 'text', 'text' => $message->{"text"} ]; 
