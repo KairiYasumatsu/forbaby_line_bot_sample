@@ -43,9 +43,9 @@ if ($message->{"text"} == '確認') {
               ]
           ] 
      ]; 
-} elseif ($message->{"text"} == 'カルーセル') {
+} elseif ($message->{"text"} == 'アンケート回答') {
      // カルーセルタイプ 
-    $messageData = [ 'type' => 'text', 'text' => $userid ];
+    $messageData = [ 'type' => 'text', 'text' => "ユーザーIDを取得できていることを確認→  ".$userid ];
  } else {
      // それ以外は送られてきたテキストをオウム返し
      $messageData = [ 'type' => 'text', 'text' => $message->{"text"} ]; 
