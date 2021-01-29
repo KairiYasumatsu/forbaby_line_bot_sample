@@ -45,7 +45,7 @@ if ($message->{"text"} == '確認') {
      ]; 
 } elseif ($message->{"text"} == 'カルーセル') {
      // カルーセルタイプ 
-    $messageData = [ 'type' => 'text', 'text' => "アンケートのURLを、useridに対してユニークなトークンをパラメーターにして返すよ" ];
+    $messageData = [ 'type' => 'text', 'text' => $userid ];
  } else {
      // それ以外は送られてきたテキストをオウム返し
      $messageData = [ 'type' => 'text', 'text' => $message->{"text"} ]; 
