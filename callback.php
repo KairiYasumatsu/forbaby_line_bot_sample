@@ -61,7 +61,7 @@ if ($message->{"text"} == '確認') {
               array (
                 'type' => 'message',
                 'label' => '1ヶ月',
-                'text' => '妊娠月齢2カ月です',
+                'text' => '妊娠月齢1カ月です',
               ),
             ),
             1 => 
@@ -81,7 +81,7 @@ if ($message->{"text"} == '確認') {
               array (
                 'type' => 'message',
                 'label' => '3カ月',
-                'text' => '妊娠月齢2カ月です',
+                'text' => '妊娠月齢3カ月です',
               ),
             ),
             3 => 
@@ -91,7 +91,7 @@ if ($message->{"text"} == '確認') {
               array (
                 'type' => 'message',
                 'label' => '4カ月',
-                'text' => '妊娠月齢2カ月です',
+                'text' => '妊娠月齢4カ月です',
               ),
             ),
           ),
@@ -100,7 +100,7 @@ if ($message->{"text"} == '確認') {
 
      // カルーセルタイプ 
     // $messageData = [ 'type' => 'text', 'text' => "https://volare.slack.com/archives/DKJJ24Q22/p1611902930000600"."ユーザーIDのトークンをパラメタにつけてURLを作成→  ".$userid ];
- } elseif ($message->{"text"} == '妊娠月齢2カ月です') {
+ } elseif ($message->{"text"} == '妊娠月齢1カ月です' || '妊娠月齢2カ月です' || '妊娠月齢2カ月です' || '妊娠月齢3カ月です' || '妊娠月齢4カ月です') {
     $messageData = array (
         'type' => 'text',
         'text' => '目の特徴を以下からお選びください',
@@ -142,7 +142,7 @@ if ($message->{"text"} == '確認') {
         ),
     );
 
- } elseif ($message->{"text"} == 'ぱっちり二重を選択') {
+ } elseif ($message->{"text"} == 'ぱっちり二重を選択' || 'キレなが一重を選択' || 'つぶら瞳を選択') {
     $messageData = array (
         'type' => 'text',
         'text' => '鼻の特徴を以下からお選びください',
@@ -184,7 +184,7 @@ if ($message->{"text"} == '確認') {
         ),
     );
 
- } elseif ($message->{"text"} == '小鼻が大きめの鼻') {
+ } elseif ($message->{"text"} == '小鼻が大きめの鼻' || '小鼻が小さめの鼻' || '低くて可愛い鼻') {
     $messageData = array (
         'type' => 'text',
         'text' => 'その他当てはまるものを以下から一つお選びください',
@@ -236,7 +236,7 @@ if ($message->{"text"} == '確認') {
         ),
     );
 
- } elseif ($message->{"text"} == 'クリクリ天然パーマ（髪型）') {
+ } elseif ($message->{"text"} == 'クリクリ天然パーマ（髪型）' || 'ふわふわ毛量多め（髪型）' || 'しっかり太眉（眉）' || '上がり眉（眉）') {
     $messageData = array (
         'type' => 'text',
         'text' => '洋服のカラーを以下からお選びください',
@@ -299,8 +299,8 @@ if ($message->{"text"} == '確認') {
         ),
     );
 
- } elseif ($message->{"text"} == 'クリクリ天然パーマ（髪型）') {
-    $messageData = [ 'type' => 'text', 'text' => "アンケート回答ありがとう！君だけの赤ちゃんが送られてくるよ" ]; 
+ } elseif ($message->{"text"} == 'ブルー系' || 'ピンク系' || 'グリーン系' || 'オレンジ系' || 'ホワイト系'){
+    $messageData = [ 'type' => 'text', 'text' => "これで質問は以上だよ！君だけの赤ちゃんが送られてくるよ" ]; 
  } else {
      // それ以外は送られてきたテキストをオウム返し
      $messageData = [ 'type' => 'text', 'text' => $message->{"text"} ]; 
