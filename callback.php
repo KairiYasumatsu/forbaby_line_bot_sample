@@ -1,4 +1,7 @@
-<?php 
+<?php
+
+use function PHPSTORM_META\type;
+
 $accessToken = 'FyIepKRW8Fk4NMIyb/uSrzHqEoRI9E9/SB/Rzq/v2L8Ipex6AgUNGJHY6IGB0ikH7tMnXv+3MfaW7GgHxXQn9vFn0w1i9+2HZJlgN3bblAjBhFs10sGlJLRRzs1kheXn60kgEzJyoPU5PySX0TOf3AdB04t89/1O/w1cDnyilFU='; 
 $jsonString = file_get_contents('php://input'); error_log($jsonString); 
 $jsonObj = json_decode($jsonString); 
@@ -44,8 +47,50 @@ if ($message->{"text"} == '確認') {
           ] 
      ]; 
 } elseif ($message->{"text"} == 'アンケート回答') {
+    $messageData = array (
+        'type' => 'text',
+        'text' => 'Select your favorite food category or send me your location!',
+        'quickReply' => 
+        array (
+          'items' => 
+          array (
+            0 => 
+            array (
+              'type' => 'action',
+              'imageUrl' => 'https://example.com/sushi.png',
+              'action' => 
+              array (
+                'type' => 'message',
+                'label' => 'Sushi',
+                'text' => 'Sushi',
+              ),
+            ),
+            1 => 
+            array (
+              'type' => 'action',
+              'imageUrl' => 'https://example.com/tempura.png',
+              'action' => 
+              array (
+                'type' => 'message',
+                'label' => 'Tempura',
+                'text' => 'Tempura',
+              ),
+            ),
+            2 => 
+            array (
+              'type' => 'action',
+              'action' => 
+              array (
+                'type' => 'location',
+                'label' => 'Send location',
+              ),
+            ),
+          ),
+        ),
+    );
+
      // カルーセルタイプ 
-    $messageData = [ 'type' => 'text', 'text' => "https://volare.slack.com/archives/DKJJ24Q22/p1611902930000600"."ユーザーIDのトークンをパラメタにつけてURLを作成→  ".$userid ];
+    // $messageData = [ 'type' => 'text', 'text' => "https://volare.slack.com/archives/DKJJ24Q22/p1611902930000600"."ユーザーIDのトークンをパラメタにつけてURLを作成→  ".$userid ];
  } else {
      // それ以外は送られてきたテキストをオウム返し
      $messageData = [ 'type' => 'text', 'text' => $message->{"text"} ]; 
