@@ -184,6 +184,123 @@ if ($message->{"text"} == '確認') {
         ),
     );
 
+ } elseif ($message->{"text"} == '小鼻が大きめの鼻') {
+    $messageData = array (
+        'type' => 'text',
+        'text' => 'その他当てはまるものを以下から一つお選びください',
+        'quickReply' => 
+        array (
+          'items' => 
+          array (
+            0 => 
+            array (
+              'type' => 'action',
+              'action' => 
+              array (
+                'type' => 'message',
+                'label' => 'クリクリ天然パーマ（髪型）',
+                'text' => 'クリクリ天然パーマ（髪型）',
+              ),
+            ),
+            1 => 
+            array (
+              'type' => 'action',
+              'action' => 
+              array (
+                'type' => 'message',
+                'label' => 'ふわふわ毛量多め（髪型）',
+                'text' => 'ふわふわ毛量多め（髪型）',
+              ),
+            ),
+            2 => 
+            array (
+              'type' => 'action',
+              'action' => 
+              array (
+                'type' => 'message',
+                'label' => 'しっかり太眉（眉）',
+                'text' => 'しっかり太眉（眉）',
+              ),
+            ),
+            3 => 
+            array (
+              'type' => 'action',
+              'action' => 
+              array (
+                'type' => 'message',
+                'label' => '上がり眉（眉）',
+                'text' => '上がり眉（眉）',
+              ),
+            ),
+          ),
+        ),
+    );
+
+ } elseif ($message->{"text"} == 'クリクリ天然パーマ（髪型）') {
+    $messageData = array (
+        'type' => 'text',
+        'text' => '洋服のカラーを以下からお選びください',
+        'quickReply' => 
+        array (
+          'items' => 
+          array (
+            0 => 
+            array (
+              'type' => 'action',
+              'action' => 
+              array (
+                'type' => 'message',
+                'label' => 'ブルー系',
+                'text' => 'ブルー系',
+              ),
+            ),
+            1 => 
+            array (
+              'type' => 'action',
+              'action' => 
+              array (
+                'type' => 'message',
+                'label' => 'ピンク系',
+                'text' => 'ピンク系',
+              ),
+            ),
+            2 => 
+            array (
+              'type' => 'action',
+              'action' => 
+              array (
+                'type' => 'message',
+                'label' => 'グリーン系',
+                'text' => 'グリーン系',
+              ),
+            ),
+            3 => 
+            array (
+              'type' => 'action',
+              'action' => 
+              array (
+                'type' => 'message',
+                'label' => 'オレンジ系',
+                'text' => 'オレンジ系',
+              ),
+            ),
+            4 => 
+            array (
+              'type' => 'action',
+              'action' => 
+              array (
+                'type' => 'message',
+                'label' => 'ホワイト系',
+                'text' => 'ホワイト系',
+              ),
+            ),
+
+          ),
+        ),
+    );
+
+ } elseif ($message->{"text"} == 'クリクリ天然パーマ（髪型）') {
+    $messageData = [ 'type' => 'text', 'text' => "アンケート回答ありがとう！君だけの赤ちゃんが送られてくるよ" ]; 
  } else {
      // それ以外は送られてきたテキストをオウム返し
      $messageData = [ 'type' => 'text', 'text' => $message->{"text"} ]; 
