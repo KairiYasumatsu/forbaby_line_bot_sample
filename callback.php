@@ -142,7 +142,7 @@ if ($message->{"text"} == '確認') {
         ),
     );
 
- } elseif ($message->{"text"} == 'ぱっちり二重を選択' || 'キレなが一重を選択' || 'つぶら瞳を選択') {
+ } elseif ($message->{"text"} == 'ぱっちり二重を選択') {
     $messageData = array (
         'type' => 'text',
         'text' => '鼻の特徴を以下からお選びください',
@@ -184,7 +184,7 @@ if ($message->{"text"} == '確認') {
         ),
     );
 
- } elseif ($message->{"text"} == '小鼻が大きめの鼻' || '小鼻が小さめの鼻' || '低くて可愛い鼻') {
+ } elseif ($message->{"text"} == '小鼻が大きめの鼻') {
     $messageData = array (
         'type' => 'text',
         'text' => 'その他当てはまるものを以下から一つお選びください',
@@ -236,7 +236,7 @@ if ($message->{"text"} == '確認') {
         ),
     );
 
- } elseif ($message->{"text"} == 'クリクリ天然パーマ（髪型）' || 'ふわふわ毛量多め（髪型）' || 'しっかり太眉（眉）' || '上がり眉（眉）') {
+ } elseif ($message->{"text"} == 'クリクリ天然パーマ（髪型）') {
     $messageData = array (
         'type' => 'text',
         'text' => '洋服のカラーを以下からお選びください',
