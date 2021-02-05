@@ -100,7 +100,7 @@ if ($message->{"text"} == '確認') {
 
      // カルーセルタイプ 
     // $messageData = [ 'type' => 'text', 'text' => "https://volare.slack.com/archives/DKJJ24Q22/p1611902930000600"."ユーザーIDのトークンをパラメタにつけてURLを作成→  ".$userid ];
- } elseif ($message->{"text"} == '妊娠月齢1カ月です' || '妊娠月齢2カ月です' || '妊娠月齢2カ月です' || '妊娠月齢3カ月です' || '妊娠月齢4カ月です') {
+ } elseif ($message->{"text"} == '妊娠月齢2カ月です') {
     $messageData = array (
         'type' => 'text',
         'text' => '目の特徴を以下からお選びください',
@@ -299,7 +299,7 @@ if ($message->{"text"} == '確認') {
         ),
     );
 
- } elseif ($message->{"text"} == 'ブルー系' || 'ピンク系' || 'グリーン系' || 'オレンジ系' || 'ホワイト系'){
+ } elseif ($message->{"text"} == 'ブルー系'){
     $messageData = [ 'type' => 'text', 'text' => "これで質問は以上だよ！君だけの赤ちゃんが送られてくるよ" ]; 
  } else {
      // それ以外は送られてきたテキストをオウム返し
