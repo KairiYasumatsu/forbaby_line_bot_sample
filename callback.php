@@ -49,7 +49,7 @@ if ($message->{"text"} == '確認') {
 } elseif ($message->{"text"} == 'アンケート回答') {
     $messageData = array (
         'type' => 'text',
-        'text' => 'Select your favorite food category or send me your location!',
+        'text' => '現在の妊娠月齢を教えてください',
         'quickReply' => 
         array (
           'items' => 
@@ -57,23 +57,21 @@ if ($message->{"text"} == '確認') {
             0 => 
             array (
               'type' => 'action',
-              'imageUrl' => 'https://example.com/sushi.png',
               'action' => 
               array (
                 'type' => 'message',
-                'label' => 'Sushi',
-                'text' => 'Sushi',
+                'label' => '1ヶ月',
+                'text' => '妊娠月齢1カ月です',
               ),
             ),
             1 => 
             array (
               'type' => 'action',
-              'imageUrl' => 'https://example.com/tempura.png',
               'action' => 
               array (
                 'type' => 'message',
-                'label' => 'Tempura',
-                'text' => 'Tempura',
+                'label' => '2カ月',
+                'text' => '妊娠月齢2カ月です',
               ),
             ),
             2 => 
@@ -81,8 +79,19 @@ if ($message->{"text"} == '確認') {
               'type' => 'action',
               'action' => 
               array (
-                'type' => 'location',
-                'label' => 'Send location',
+                'type' => 'message',
+                'label' => '3カ月',
+                'text' => '妊娠月齢3カ月です',
+              ),
+            ),
+            3 => 
+            array (
+              'type' => 'action',
+              'action' => 
+              array (
+                'type' => 'message',
+                'label' => '4カ月',
+                'text' => '妊娠月齢4カ月です',
               ),
             ),
           ),
