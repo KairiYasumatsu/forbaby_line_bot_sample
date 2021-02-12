@@ -24,7 +24,7 @@ if ($message->{"text"} == '確認') {
             ] 
         ]
  ]; 
-} elseif ($event_type = 'follow') { 
+} elseif ($message->{"text"} == 'ボタン') { 
     // ボタンタイプ 
     $messageData = [ 
         'type' => 'template',
@@ -47,7 +47,7 @@ if ($message->{"text"} == '確認') {
               ]
           ] 
      ]; 
-} elseif ($message->{"text"} == 'アンケート回答') {
+} elseif ($message->{"text"} == 'アンケート回答' || $event_type = "follow") {
     $messageData = array (
         'type' => 'text',
         'text' => '現在の妊娠月齢を教えてください',
