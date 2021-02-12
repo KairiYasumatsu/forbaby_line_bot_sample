@@ -8,6 +8,7 @@ $jsonObj = json_decode($jsonString);
 $message = $jsonObj->{"events"}[0]->{"message"};
 $userid = $jsonObj->{"events"}[0]->{"source"}->{"userId"};
 $replyToken = $jsonObj->{"events"}[0]->{"replyToken"};
+$event_type = $jsonObj->{"events"}[0]->{"type"};
 
 error_log($userid);
  // 送られてきたメッセージの中身からレスポンスのタイプを選択 
@@ -23,7 +24,7 @@ if ($message->{"text"} == '確認') {
             ] 
         ]
  ]; 
-} elseif ($message->{"text"} == 'ボタン') { 
+} elseif ($event_type = 'follow') { 
     // ボタンタイプ 
     $messageData = [ 
         'type' => 'template',
