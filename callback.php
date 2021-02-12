@@ -60,7 +60,7 @@ if ($message->{"text"} == '確認') {
               'action' => 
               array (
                 'type' => 'message',
-                'label' => '1ヶ月',
+                'label' => '1~3カ月',
                 'text' => '妊娠月齢1カ月です',
               ),
             ),
@@ -70,7 +70,7 @@ if ($message->{"text"} == '確認') {
               'action' => 
               array (
                 'type' => 'message',
-                'label' => '2カ月',
+                'label' => '4~6カ月',
                 'text' => '妊娠月齢1カ月です',
               ),
             ),
@@ -80,7 +80,7 @@ if ($message->{"text"} == '確認') {
               'action' => 
               array (
                 'type' => 'message',
-                'label' => '3カ月',
+                'label' => '6~9カ月',
                 'text' => '妊娠月齢1カ月です',
               ),
             ),
@@ -90,7 +90,17 @@ if ($message->{"text"} == '確認') {
               'action' => 
               array (
                 'type' => 'message',
-                'label' => '4カ月',
+                'label' => '10~12カ月',
+                'text' => '妊娠月齢1カ月です',
+              ),
+            ),
+            4 => 
+            array (
+              'type' => 'action',
+              'action' => 
+              array (
+                'type' => 'message',
+                'label' => '13~15カ月',
                 'text' => '妊娠月齢1カ月です',
               ),
             ),
