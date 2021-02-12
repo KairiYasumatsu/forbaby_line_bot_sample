@@ -62,7 +62,7 @@ if ($message->{"text"} == '確認') {
               array (
                 'type' => 'message',
                 'label' => '1~3カ月',
-                'text' => '妊娠月齢1カ月です',
+                'text' => '妊娠周期回答完了',
               ),
             ),
             1 => 
@@ -72,7 +72,7 @@ if ($message->{"text"} == '確認') {
               array (
                 'type' => 'message',
                 'label' => '4~6カ月',
-                'text' => '妊娠月齢1カ月です',
+                'text' => '妊娠周期回答完了',
               ),
             ),
             2 => 
@@ -82,7 +82,7 @@ if ($message->{"text"} == '確認') {
               array (
                 'type' => 'message',
                 'label' => '6~9カ月',
-                'text' => '妊娠月齢1カ月です',
+                'text' => '妊娠周期回答完了',
               ),
             ),
             3 => 
@@ -92,7 +92,7 @@ if ($message->{"text"} == '確認') {
               array (
                 'type' => 'message',
                 'label' => '10~12カ月',
-                'text' => '妊娠月齢1カ月です',
+                'text' => '妊娠周期回答完了',
               ),
             ),
             4 => 
@@ -102,7 +102,7 @@ if ($message->{"text"} == '確認') {
               array (
                 'type' => 'message',
                 'label' => '13~15カ月',
-                'text' => '妊娠月齢1カ月です',
+                'text' => '妊娠周期回答完了',
               ),
             ),
           ),
@@ -111,7 +111,7 @@ if ($message->{"text"} == '確認') {
 
      // カルーセルタイプ 
     // $messageData = [ 'type' => 'text', 'text' => "https://volare.slack.com/archives/DKJJ24Q22/p1611902930000600"."ユーザーIDのトークンをパラメタにつけてURLを作成→  ".$userid ];
- } elseif ($message->{"text"} == '妊娠月齢1カ月です') {
+ } elseif ($message->{"text"} == '妊娠周期回答完了') {
     $messageData = array (
         'type' => 'text',
         'text' => '目の特徴を以下からお選びください',
@@ -126,7 +126,7 @@ if ($message->{"text"} == '確認') {
               array (
                 'type' => 'message',
                 'label' => 'ぱっちり二重',
-                'text' => 'ぱっちり二重を選択',
+                'text' => '目の特徴回答完了',
               ),
             ),
             1 => 
@@ -136,7 +136,7 @@ if ($message->{"text"} == '確認') {
               array (
                 'type' => 'message',
                 'label' => 'キレなが一重',
-                'text' => 'ぱっちり二重を選択',
+                'text' => '目の特徴回答完了',
               ),
             ),
             2 => 
@@ -146,14 +146,14 @@ if ($message->{"text"} == '確認') {
               array (
                 'type' => 'message',
                 'label' => 'つぶら瞳',
-                'text' => 'ぱっちり二重を選択',
+                'text' => '目の特徴回答完了',
               ),
             ),
           ),
         ),
     );
 
- } elseif ($message->{"text"} == 'ぱっちり二重を選択') {
+ } elseif ($message->{"text"} == '目の特徴回答完了') {
     $messageData = array (
         'type' => 'text',
         'text' => '鼻の特徴を以下からお選びください',
@@ -168,7 +168,7 @@ if ($message->{"text"} == '確認') {
               array (
                 'type' => 'message',
                 'label' => '小鼻が大きめの鼻',
-                'text' => '小鼻が大きめの鼻',
+                'text' => '鼻の特徴回答完了',
               ),
             ),
             1 => 
@@ -178,7 +178,7 @@ if ($message->{"text"} == '確認') {
               array (
                 'type' => 'message',
                 'label' => '小鼻が小さめの鼻',
-                'text' => '小鼻が大きめの鼻',
+                'text' => '鼻の特徴回答完了',
               ),
             ),
             2 => 
@@ -188,14 +188,14 @@ if ($message->{"text"} == '確認') {
               array (
                 'type' => 'message',
                 'label' => '低くて可愛い鼻',
-                'text' => '小鼻が大きめの鼻',
+                'text' => '鼻の特徴回答完了',
               ),
             ),
           ),
         ),
     );
 
- } elseif ($message->{"text"} == '小鼻が大きめの鼻') {
+ } elseif ($message->{"text"} == '鼻の特徴回答完了') {
     $messageData = array (
         'type' => 'text',
         'text' => 'その他当てはまるものを以下から一つお選びください',
@@ -210,7 +210,7 @@ if ($message->{"text"} == '確認') {
               array (
                 'type' => 'message',
                 'label' => 'クリクリ天然パーマ（髪型）',
-                'text' => 'クリクリ天然パーマ（髪型）',
+                'text' => 'その他の設問完了',
               ),
             ),
             1 => 
@@ -220,7 +220,7 @@ if ($message->{"text"} == '確認') {
               array (
                 'type' => 'message',
                 'label' => 'ふわふわ毛量多め（髪型）',
-                'text' => 'クリクリ天然パーマ（髪型）',
+                'text' => 'その他の設問完了',
               ),
             ),
             2 => 
@@ -230,7 +230,7 @@ if ($message->{"text"} == '確認') {
               array (
                 'type' => 'message',
                 'label' => 'しっかり太眉（眉）',
-                'text' => 'クリクリ天然パーマ（髪型）',
+                'text' => 'その他の設問完了',
               ),
             ),
             3 => 
@@ -240,14 +240,14 @@ if ($message->{"text"} == '確認') {
               array (
                 'type' => 'message',
                 'label' => '上がり眉（眉）',
-                'text' => 'クリクリ天然パーマ（髪型）',
+                'text' => 'その他の設問完了',
               ),
             ),
           ),
         ),
     );
 
- } elseif ($message->{"text"} == 'クリクリ天然パーマ（髪型）') {
+ } elseif ($message->{"text"} == 'その他の設問完了') {
     $messageData = array (
         'type' => 'text',
         'text' => '洋服のカラーを以下からお選びください',
@@ -262,7 +262,7 @@ if ($message->{"text"} == '確認') {
               array (
                 'type' => 'message',
                 'label' => 'ブルー系',
-                'text' => 'ブルー系',
+                'text' => '洋服カラー完了',
               ),
             ),
             1 => 
@@ -272,7 +272,7 @@ if ($message->{"text"} == '確認') {
               array (
                 'type' => 'message',
                 'label' => 'ピンク系',
-                'text' => 'ブルー系',
+                'text' => '洋服カラー完了',
               ),
             ),
             2 => 
@@ -282,7 +282,7 @@ if ($message->{"text"} == '確認') {
               array (
                 'type' => 'message',
                 'label' => 'グリーン系',
-                'text' => 'ブルー系',
+                'text' => '洋服カラー完了',
               ),
             ),
             3 => 
@@ -292,7 +292,7 @@ if ($message->{"text"} == '確認') {
               array (
                 'type' => 'message',
                 'label' => 'オレンジ系',
-                'text' => 'ブルー系',
+                'text' => '洋服カラー完了',
               ),
             ),
             4 => 
@@ -302,7 +302,7 @@ if ($message->{"text"} == '確認') {
               array (
                 'type' => 'message',
                 'label' => 'ホワイト系',
-                'text' => 'ブルー系',
+                'text' => '洋服カラー完了',
               ),
             ),
 
@@ -310,7 +310,7 @@ if ($message->{"text"} == '確認') {
         ),
     );
 
- } elseif ($message->{"text"} == 'ブルー系'){
+ } elseif ($message->{"text"} == '洋服カラー完了'){
     $messageData = [ 'type' => 'text', 'text' => "これで質問は以上だよ！君だけの赤ちゃんが送られてくるよ" ]; 
  } else {
      // それ以外は送られてきたテキストをオウム返し
