@@ -7,10 +7,23 @@ $jsonString = file_get_contents('php://input'); error_log($jsonString);
 $jsonObj = json_decode($jsonString); 
 $message = $jsonObj->{"events"}[0]->{"message"};
 $userid = $jsonObj->{"events"}[0]->{"source"}->{"userId"};
+$richmenuid = 'richmenu-31169b5036a5818832af61f8cb3304d6';
 $replyToken = $jsonObj->{"events"}[0]->{"replyToken"};
 $event_type = $jsonObj->{"events"}[0]->{"type"};
 
 error_log($userid);
+
+if($event_type == "follow"){
+    $channel = curl_init('https://api.line.me/v2/bot/user/'.$userid.'/richmenu/'.$richmenuid); 
+    curl_setopt($channel, CURLOPT_POST, true);
+    curl_setopt($channel, CURLOPT_CUSTOMREQUEST, 'POST'); 
+    curl_setopt($channel, CURLOPT_RETURNTRANSFER, true); 
+    curl_setopt($channel, CURLOPT_HTTPHEADER, array('Authorization: Bearer ' . $accessToken )); 
+    $result = curl_exec($channel);
+    error_log($result);
+    curl_close($channel);
+}
+
  // 送られてきたメッセージの中身からレスポンスのタイプを選択 
 if ($message->{"text"} == '確認') {
      // 確認ダイアログタイプ 
