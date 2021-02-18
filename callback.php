@@ -324,7 +324,14 @@ if ($message->{"text"} == '確認') {
     );
 
  } elseif ($message->{"text"} == '洋服カラー完了'){
-    $messageData = [ 'type' => 'text', 'text' => "これで質問は以上だよ！君だけの赤ちゃんが送られてくるよ" ]; 
+    $messageData = [ 'type' => 'text', 'text' => "これで質問は以上だよ！君だけの赤ちゃんが送られてくるよ" ];
+    $channelDelete = curl_init('https://api.line.me/v2/bot/user/'.$userid.'/richmenu'); 
+    curl_setopt($channelDelete, CURLOPT_CUSTOMREQUEST, "DELETE"); 
+    curl_setopt($channelDelete, CURLOPT_RETURNTRANSFER, true); 
+    curl_setopt($channelDelete, CURLOPT_HTTPHEADER, array('Authorization: Bearer ' . $accessToken )); 
+    $result = curl_exec($channelDelete);
+    error_log($result);
+    curl_close($channelDelete);
  } else {
      // それ以外は送られてきたテキストをオウム返し
      $messageData = [ 'type' => 'text', 'text' => $message->{"text"} ]; 
