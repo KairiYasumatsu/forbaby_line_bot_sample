@@ -1,6 +1,6 @@
 <html>
  <head>
-  <title>PHP Test</title>
+  <title>医師監修】妊娠初期</title>
   <meta property="og:url" content="https://st.benesse.ne.jp/ninshin/shoki/">
   <meta property="og:title" content="【医師監修】妊娠初期（妊娠成立～妊娠15週）に知っておきたいこと">
   <meta property="og:description" content="妊娠の兆候は？　妊娠が判明したら気をつけたいことや、心構えは？“つわり”ってどんなもの？　妊娠初期について詳しく見ていきましょう。">

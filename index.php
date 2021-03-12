@@ -1,6 +1,6 @@
 <html>
  <head>
-  <title>PHP Test</title>
+  <title>妊娠初期に現れる症状</title>
   <meta property="og:url" content="https://jp.moony.com/ja/tips/pregnancy/pregnancy/examination/pt0607.html">
   <meta property="og:type" content="article">
   <meta property="og:image" content="https://jp.moony.com/content/dam/sites/jp_moony_com/images/tips_pregnancy/mv/pt0607.png">
