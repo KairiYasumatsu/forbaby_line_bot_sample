@@ -15,10 +15,11 @@
 
   gtag('config', 'G-8K6X9HPPPR');
 </script>
-
-  <meta http-equiv="refresh" content="0;URL=https://st.benesse.ne.jp/ninshin/shoki/">
  </head>
  <body>
  <?php echo '<p>Hello World</p>'; ?> 
+ <script>
+ location.href="https://st.benesse.ne.jp/ninshin/shoki/";
+</script>
  </body>
 </html>

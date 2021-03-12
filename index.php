@@ -15,9 +15,12 @@
 
   gtag('config', 'G-8K6X9HPPPR');
 </script>
-<meta http-equiv="refresh" content="0;URL=https://jp.moony.com/ja/tips/pregnancy/pregnancy/examination/pt0607.html">
  </head>
  <body>
  <?php echo '<p>Hello World</p>'; ?> 
+ <script>
+ location.href="https://jp.moony.com/ja/tips/pregnancy/pregnancy/examination/pt0607.html";
+</script>
+
  </body>
 </html>
